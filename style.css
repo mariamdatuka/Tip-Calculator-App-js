@@ -1,0 +1,208 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap');
+
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+html{
+    font-size:62.5%;
+}
+
+body{
+    background-color: hsl(185, 41%, 84%);
+    font-family:'Space Mono', monospace;
+    height:100vh;
+    width:100vw;
+    font-size:1.3rem;
+}
+
+
+.title-logo{
+    text-align:center;
+    margin-top: 6rem;
+    margin-bottom:3rem;
+}
+
+.tip-container{
+    background-color: white;
+    display:flex;
+    flex-direction: column;
+    padding:2rem;
+    border-radius: 1.4rem 1.4rem 0 0;
+}
+
+
+label{
+    color:hsl(186, 14%, 43%);
+    font-family:700;
+    margin-bottom:0.3rem;
+ 
+}
+
+input{
+    border:none;
+    outline:none;
+    padding:0.5rem;
+    padding-inline-start: 1.8rem;
+    background-position: 1.7rem 1.5rem;
+    background-repeat: no-repeat;
+    background-color:  hsl(189, 41%, 97%);
+    text-align: right;
+    font-size: 2.4rem;
+    font-weight: bolder;
+    color:hsl(183, 100%, 15%);
+    height:5rem;
+}
+
+ .tip-custom, .tip{
+    width:15rem;
+    height:5rem;
+    border-radius:5px;
+    font-size:2.2rem;
+}
+
+.bill-input{
+    background-image: url('./images/icon-dollar.svg');
+    margin-bottom: 3.6rem;
+}
+
+.tip-options{
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    row-gap:1.8rem;
+    column-gap:1rem;
+    margin-bottom:2rem;
+    margin-top:1rem;
+    
+    
+}
+
+.tip{
+    background-color: hsl(183, 100%, 15%);
+    color:white;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    cursor:pointer;
+}
+
+.active-tip{
+    color:hsl(183, 100%, 15%);
+    background-color:  hsl(172, 67%, 45%);
+    font-weight:bolder;
+}
+
+.people-input{
+    margin-top:2rem;
+    background-image: url('./images/icon-person.svg');
+    margin-bottom:2rem;
+}
+
+
+.result{
+    background-color:hsl(183, 100%, 15%);
+    color:white;
+    border-radius:5px;
+    padding: 4rem 2rem;
+   
+}
+
+.tip-amount, .total{
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom:1.7rem;
+}
+
+
+.person{
+    font-size:1.1rem;
+    color:hsl(184, 14%, 56%);
+    font-weight:800;
+}
+
+.amount{
+    font-size:2.8rem;
+    color: hsl(172, 67%, 45%);
+    font-weight: 700;
+}
+
+.reset{
+    text-align: center;
+    font-size:2rem;
+    font-weight: 700;
+    color:hsl(183, 100%, 15%);
+    background-color: hsl(172, 67%, 45%);
+    padding: 9px 0 9px 0;
+    border-radius:5px;
+    cursor:pointer;
+}
+
+.error{
+    color:red;
+    display:none;
+}
+
+
+@media screen and (min-width:1280px){
+  
+
+    input{
+        width:50rem;
+        padding:9px;
+        background-position: 1.7rem 1.8rem;
+    }
+
+    .tip-container{
+        display:flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin: 0 10rem;
+        border-radius:8px;
+    }
+
+    .bill-box{
+        display:flex;
+        flex-direction: column;
+    }
+
+    .tip-options{
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    .people{
+        margin-top:3rem;
+    }
+
+    .bill-box:first-child{
+        padding-top:3rem;
+       
+    }
+
+    .result{
+        width:50rem;
+        display:flex;
+        flex-direction: column;
+        gap:5rem;
+        border-radius: 8px;;
+    }
+
+    .tip-amount, .total{
+        gap:8rem;
+        font-size:2.4rem;
+    }
+
+    .reset{
+        
+    margin-top:10rem;
+    background-color: hsl(186, 14%, 43%);
+    font-size:2.4rem;
+    border-radius:8px;
+        }
+}
+
+
+
