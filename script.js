@@ -10,6 +10,9 @@ const reset=document.querySelector('.reset');
 const error=document.querySelector('.error');
 
 //default values of tip and total amount
+billInput.value='';
+
+peopleInput.value='';
 tipPerPerson.innerHTML='$'+ (0.0).toFixed(2);
 totalPerPerson.innerHTML='$'+ (0.0).toFixed(2);
 
@@ -21,8 +24,8 @@ reset.addEventListener('click', resetApp);
 
 
 let billValue=0.0;
-let peopleValue=1;
-let tipValue=0.15;
+let peopleValue=0;
+let tipValue=0.00;
 
 function billInputNumber(){
 billValue=parseFloat(billInput.value);
@@ -79,12 +82,13 @@ function calculateTip(){
 }
 
 function resetApp(){
-billInput.value='0.0';
-billInputNumber();
-peopleInput.value='1';
-peopleInputNumber();
+billInput.value='';
+peopleInput.value='';
+tipPerPerson.innerHTML='0.00';
+totalPerPerson.innerHTML='0.00';
 tipCustom.value='';
 tips.forEach(tip=>{
     tip.classList.remove('active-tip');
+    tipValue=0.00;
 })
 }
